@@ -41,10 +41,7 @@
     
     </section>
 
-
-
 ##CSS
-
 
 
 body {
