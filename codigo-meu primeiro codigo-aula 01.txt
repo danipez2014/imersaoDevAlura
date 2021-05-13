@@ -1,0 +1,75 @@
+## Aula 01 - imersaoDevAlura - meu primeiro codigo - https://codepen.io/danipez2014/details/KKaKdBg
+
+
+#HTML
+
+<html>
+  <head>
+    <title>
+      Imersão Alura - Aula 1
+    </title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="page-title">
+        Conversor de moedas
+      </h1>
+      <p class="page-subtitle">
+       Que tal ir para a Finlândia ? - Descubra os valores em Reais
+      </p>
+      <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-conversor-de-moedas.svg" class="page-logo" alt="">
+    </div>
+      <a href="https://alura.com.br/" target="_blank">
+        <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+        </a>
+  </body>
+</html>
+
+##CSS
+
+body {
+  font-family: 'Roboto Mono',monospace;
+  min-height: 400px;
+  background-image: url('https://www.girassolviagens.com/wp-content/uploads/2018/07/Finl%C3%A2ndia-em-Dezembro-900x530.jpg');
+  background-color: #000000;
+  background-size: 190vh;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+  height: 100vh;
+}
+
+.page-title {
+  color: #ffffff;
+  margin: 0 0 5px;
+}
+
+.page-subtitle {
+  color: #ffffff;
+  margin-top: 5px;
+}
+
+.page-logo {
+  width: 200px;
+}
+
+.alura-logo {
+  width: 40px;
+  position: absolute;
+  top: 10px;
+  right:10px;
+}
+
+
+## JS
+
+var valorEmDolarTexto = prompt ("Digite o valor em U$ e descubra qual o valor em reais para realizar sua viagem ")
+var valorEmDolarNumero = parseFloat(valorEmDolarTexto)
+
+var valorEmReal = valorEmDolarTexto * 5.50
+var valorEmRealFixado = valorEmReal.toFixed(2)
+alert (valorEmRealFixado)
