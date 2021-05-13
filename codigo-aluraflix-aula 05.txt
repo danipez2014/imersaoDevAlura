@@ -1,0 +1,131 @@
+
+## Aula 05 - AluraFlix , botões,validações e funções. - https://codepen.io/danipez2014/pen/rNjeLEX
+
+<html>
+
+<head>
+    <title>
+        Imersão Dev - Aula 05
+    </title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="page-title">
+            Aluraflix
+        </h1>
+        <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-aluraflix.svg" class="page-logo"
+            alt="">
+        <p class="page-subtitle">
+            Qual seu filme favorito? 
+                   </p>
+        <div class="form-wrapper">
+            <input type="text" id="filme" name="filme" placeholder="Insira endereço de imagem ">
+            <button onClick="adicionarFilme()">Adicionar Filme</button>
+        </div>
+    </div>
+    <div id="listaFilmes"></div>
+    <a href="https://alura.com.br/" target="_blank">
+        <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+    </a>
+
+</body>
+
+</html>
+
+#style.css
+
+body {
+    font-family: 'Roboto Mono',monospace;
+    text-align:center;
+    background-image: url('https://cinepop.com.br/wp-content/uploads/2021/03/irregulares-de-baker-street-3.jpg');
+    background-color: #000000;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
+  
+  .container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .page-title {
+    color: #ffffff;
+    margin: 0 0 5px;
+  }
+  
+  .page-subtitle {
+    color: #ffffff;
+    margin-top: 5px;
+  }
+  
+  .page-logo {
+    width: 100px;
+  }
+  
+  .alura-logo {
+    width: 40px;
+    position: absolute;
+    top: 10px;
+    right:10px;
+  }
+  
+  #listaFilmes img {
+    margin: 50px;
+  }
+  
+  .form-wrapper {
+    margin: 0 0 100px;
+  }
+  
+  .form-wrapper input {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 15px;
+  }
+  
+  .form-wrapper button {
+    border: 0;
+    color: #ffffff;
+    background: #DA1E26;
+    font-weight:bold;
+    padding: 15px 20px;
+    font-size: 16px;
+    borde-radius: 4px;
+    margin-top: 200px;
+    cursor: pointer;
+    transition: .3s;
+  }
+  
+  .form-wrapper button:hover {
+    opacity:.8;
+  }
+
+#js
+
+function adicionarFilme() { 
+        var campoFilmeFavorito = document.querySelector('#filme') 
+        var filmeFavorito = campoFilmeFavorito.value
+        if (filmeFavorito.endsWith('.jpg')){
+          
+        listarFilmesNaTela (filmeFavorito) 
+        } else if (filmeFavorito.endsWith('</iframe>')){
+        assistaSeuTrailer  (filmeFavorito)}
+  else { alert ( " Extensão  Invalida - Para imagem : .jpg - Para Trailer : Procure pela opção embed no youtube" ) }
+        campoFilmeFavorito.value = null
+}
+       
+
+function listarFilmesNaTela(filme) {
+  var listaFilmes = document.querySelector('#listaFilmes')
+  var filmeFavorito = "<img src=" + filme + ">"
+  listaFilmes.innerHTML = listaFilmes.innerHTML + filmeFavorito
+}
+
+function assistaSeuTrailer(filme){
+  var listaFilmes = document.querySelector('#listaFilmes')
+  var filmeFavorito = filme 
+  listaFilmes.innerHTML = listaFilmes.innerHTML + filmeFavorito
+}
+       
