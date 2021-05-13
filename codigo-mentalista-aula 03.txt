@@ -1,0 +1,113 @@
+## Aula 04 - imersaoDevAlura - Menalista - https://codepen.io/danipez2014/pen/rNjOLbx
+
+#HTML
+
+<html>
+
+<head>
+    <title>
+        Imersão Dev - Aula 03
+    </title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="page-title">
+            ADIVINHE O NUMERO SECRETO
+        </h1>
+        <p class="page-subtitle">
+            Digite um número de 0 a 20
+        </p>
+        <img src="" class="page-logo"
+            alt="">
+    </div>
+    <a href="https://alura.com.br/" target="_blank">
+        <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+    </a>
+  <h2></h2>
+</body>
+
+</html>
+
+#style.css
+
+body {
+    font-family: 'Roboto Mono',monospace;
+    min-height: 600px;
+    background-image: url('https://i.ytimg.com/vi/RcgMNiaZM3k/hqdefault.jpg');
+    background-color: #000000;
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+  }
+  
+  .container {
+    text-align: center;
+    padding: 20px;
+    height: 100vh;
+  }
+  
+  .page-title {
+    color: #ffffff;
+    margin: 0 0 5px;
+  }
+  
+  .page-subtitle {
+    color: WHITE;
+    font-weight:bold;
+    margin-top: 15px;
+  }
+  
+  .page-logo {
+    width: 100px;
+  }
+  
+h2 {
+    position: absolute;
+    color:white;
+    font-size:19px;
+    font-weight:bold;
+    top: 100px;
+    left: calc(30% - 100px);
+    RIGHT: calc(30% - 100px)
+    width: 145px;
+    text-align:center;
+  }
+
+  .alura-logo {
+    width: 40px;
+    position: absolute;
+    top: 10px;
+    right:10px;
+  }
+  
+  @media (max-height: 500px) {
+    body {
+      min-height:800px;
+    }
+  }
+
+##JS
+
+
+var numeroSecreto = parseInt (Math.random()*20)
+
+var tentativas = 3
+while (tentativas >0 ) {
+  var chute = parseInt(prompt (" Digite um numero entre 0 e 20"))
+  
+  if ( numeroSecreto == chute ) {
+    document.write ("<h2>" + "PARABENS!!! BATMAN !!! VOCÊ ACERTOU" + "</h2>")
+  break
+  } else if (chute > numeroSecreto) {
+    alert ("O número Secreto e menor")
+    tentativas = tentativas - 1
+  } else if (chute < numeroSecreto) {
+    alert ("O número Secreto e maior")
+    tentativas = tentativas -1
+  }  
+  
+ }
+
+if (chute != numeroSecreto) {
+  document.write("<h2>" +"SUAS TENTATIVAS SE ESGOTARAM O NUMERO ERA : " + numeroSecreto + " . VOCE MERECE UMA CHARADA : Leve como uma pena,mas nunguem pode segurar por muito tempo. O que eu sou?  SEU FOLEGO." + ",</h2>")}  
