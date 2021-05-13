@@ -1,0 +1,117 @@
+## Aula 04 - AluraFlix - https://codepen.io/danipez2014/pen/qBRbRNB
+
+
+#HTML
+
+<html>
+
+<head>
+    <title>
+        Imersão Dev - Aula 04
+    </title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="page-title">
+            Aluraflix - "MINHA LISTA DE FILMES E SERIES PREFERIDOS "
+        </h1>
+        <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-aluraflix.svg" class="page-logo"
+            alt="">
+    </div>
+    <a href="https://alura.com.br/" target="_blank">
+        <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
+    </a>
+  
+       
+</body>
+  
+
+</html>
+
+#CSS
+
+body {
+  font-family: 'Roboto Mono',monospace;
+  text-align:CENTER;
+  background-image: url('https://i.pinimg.com/originals/aa/71/96/aa7196997102584b9798ae6a8ff75508.jpg');
+  background-color: white;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.page-title {
+  color: #ffffff;
+  margin: 0 0 5px;
+}
+
+.page-subtitle {
+  color: #ffffff;
+  margin-top: 5px;
+}
+
+.page-logo {
+  width: 200px;
+}
+
+.alura-logo {
+  width: 40px;
+  position: absolute;
+  top: 10px;
+  right:10px;
+}
+
+body > img {
+  margin: 0 260px;
+}
+
+##JS
+
+var listaFilmes = [
+ 
+  "https://m.media-amazon.com/images/M/MV5BNjJkYTc5N2UtMGRlMC00M2FmLTk0ZWMtOTYxNDUwNjI2YzljXkEyXkFqcGdeQXVyNDg4NjY5OTQ@._V1_UX182_CR0,0,182,268_AL_.jpg"
+,
+  
+ "https://m.media-amazon.com/images/M/MV5BOWQ1ZWE0MTQtMmEwOS00YjA3LTgyZTAtNjY5ODEyZTJjNDI2XkEyXkFqcGdeQXVyNjE5MjUyOTM@._V1_UX182_CR0,0,182,268_AL_.jpg"
+  , 
+  "https://m.media-amazon.com/images/M/MV5BZmY4NjczYTgtZDM1NC00OGUxLTkzYzgtMWZmOGY4NjkwMGFmXkEyXkFqcGdeQXVyODU2MDg1NzU@._V1_UX182_CR0,0,182,268_AL_.jpg"
+ ,
+     
+  "https://m.media-amazon.com/images/M/MV5BZDhlMzY0ZGItZTcyNS00ZTAxLWIyMmYtZGQ2ODg5OWZiYmJkXkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_UX182_CR0,0,182,268_AL_.jpg"
+ , 
+   
+  "https://m.media-amazon.com/images/M/MV5BM2EwMmRhMmUtMzBmMS00ZDQ3LTg4OGEtNjlkODk3ZTMxMmJlXkEyXkFqcGdeQXVyMjM5ODk1NDU@._V1_UX182_CR0,0,182,268_AL_.jpg"
+ ,
+     
+  "https://m.media-amazon.com/images/M/MV5BMTkzNjEzMDEzMF5BMl5BanBnXkFtZTgwMDI0MjE4MjE@._V1_UX182_CR0,0,182,268_AL_.jpg"
+  , "https://m.media-amazon.com/images/M/MV5BMTc2MTQ3MDA1Nl5BMl5BanBnXkFtZTgwODA3OTI4NjE@._V1_UX182_CR0,0,182,268_AL_.jpg"
+ ,  "https://m.media-amazon.com/images/M/MV5BMTNmMzM0ZTktZWY3Yy00ODViLTllZDgtODcwM2QyM2E2YTU2L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_UX182_CR0,0,182,268_AL_.jpg"
+ ,
+  
+   "https://m.media-amazon.com/images/M/MV5BNzRlNGUzMmEtYTg0Ni00N2U2LTg4YWEtNDdlNmMwYjBlZDQ0XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg"
+  
+
+]
+
+var nomeFilmes = []
+  
+  nomeFilmes.push     ("TOGO")
+  nomeFilmes.push     ("TOMATES VERDES FRITOS")
+  nomeFilmes.push     ("12 HOMENS E UMA SENTENÇA")
+  nomeFilmes.push     ("MANDALORIAN")
+  nomeFilmes.push     (" O GAMBITO DA RAINHA")
+  nomeFilmes.push     ("PEAKY BLINDERS")   
+  nomeFilmes.push     ("PERDIDO EM MARTE")
+  nomeFilmes.push     ("EVEREST")
+  nomeFilmes.push     ("LUPIN")
+ 
+
+for (var i=0;i < listaFilmes.length; i++){
+ document.write("<img src=" + listaFilmes[i] +">"  + nomeFilmes[i])
+}
